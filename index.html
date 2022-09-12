@@ -35,30 +35,49 @@
       <li><a href="../../index.html"> относительная ссылка на страницу в каталоге двумя уровнями выше </a></li>
        <li><a href="/">  сокращенная на главную</a></li>
       <li><a href="/next">  сокращенная на внутреннюю</a></li>
+    </ol> 
       <h2>Форма</h2>
       <form action="index.html" method="POST">
         <label>
-          <h3> Имя:</h3></br>
-          <input type="text"  name="field_name" value: "Ваше имя">
+          <h3> Имя:</h3>
+          <input type="text"  name="field_name" value="Имя">
          </label><br/>
        <label>
-       <h3> e-mail</h3></br>
-          <input type="email"  name="field-email" value: "test@example.com">
+       <h3> e-mail</h3>
+          <input type="email"  name="field-email" value="e-mail">
          </label><br/>
       <label>
-       <h3> Дата рождения</h3></br>
-          <input type="date"  name="field-date" value: "01.01.1901">
+       <h3> Дата рождения</h3>
+          <input type="date"  name="field-date" value="00-00-1900" >
          </label><br/>
-   <label>
-    <h3> Пол</h3></br>
-       <label><input type="radio" checked="checked" name="radio-1" value=""Значение1" />Мужской</label>
-        <label><input type="radio" checked="checked" name="radio-2" value="Значение2" />Женский</label><br />
-   </label><br/>
+         <label>
+        <h3> Пол</h3>
+        <label><input type="radio" checked="checked" name="radio-group-2" value="Значение1" />Женский</label><br />
+        <label><input type="radio" name="radio-group-2" value="Значение2" />Мужской</label><br />
+        
+        <h3> Количество конечностей</h3>
+        <label><input type="radio" checked="checked" name="radio-group-1" value="Значение1" />2</label><br />
+          <label><input type="radio" name="radio-group-1" value="Значение3" />3</label><br />
+          <label><input type="radio" name="radio-group-1" value="Значение4" />4</label><br />
+        <h3> Сверхспособности</h3>
+        <label>
+          <select name="field-liest" multiple="multiple">
+          <option value="Значение1">бессмертие</option>
+          <option value="Значение2" selected="selected">прохождение сквозь стены</option>
+            <option value="Значение3" selected="selected">левитация</option>
+         </select>
+        </label><br />
+        <h3> Биография</h3>
+        <label>
+          <textarea name="field-text"></textarea>
+        </label><br />
+        
+        <label><input type="checkbox" checked="checked" name="check-1" /><strong>C контрактом ознакомлен(а)</strong></strong></label><br />
+        <input type="submit" value="Отправить">
 
        </form>
 
 
         
-    </ol> 
   </body>
 </html>

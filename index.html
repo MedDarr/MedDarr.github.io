@@ -29,8 +29,21 @@
             <area shape="circle" coords="75,75,50" href="https://colorscheme.ru/color-names.html" alt="Подсказка">
             <area shape="rect" coords="312,397,614,655" href="https://ru.wikipedia.org/wiki/Холст" alt="П">
         </map></li>
-      <li><a href="/сourse/">относительная ссылка на страницу в текущем каталоге</a></li>
-      <li><a href="/about/example">относительная ссылка на страницу в каталоге about</a></li>
+      <li><a href="сourse">относительная ссылка на страницу в текущем каталоге</a></li>
+      <li><a href="./about/example">относительная ссылка на страницу в каталоге about</a></li>
+       <li><a href="../index.html"> относительная ссылка на страницу в каталоге уровнем выше текущего </a></li>
+      <li><a href="../../index.html"> относительная ссылка на страницу в каталоге двумя уровнями выше </a></li>
+       <li><a href="/">  сокращенная на главную</a></li>
+      <li><a href="/next">  сокращенная на внутреннюю</a></li>
+      <h2>Форма</h2>
+      <form action="index.html" method="POST">
+        <label>
+          <input type="text" id="name" name="student_name">
+         </label><br/>
+       </form>
+
+
+        
     </ol> 
   </body>
 </html>

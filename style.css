@@ -64,7 +64,7 @@ th{
     background-color: #dcd0ff;
 }
 tr:nth-child(even){
-    background-color: #ccf2ff;
+    background-color: #grey;
 }
 footer{
     width: 100%;

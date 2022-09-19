@@ -9,6 +9,7 @@ header{
     font-family: serif ;
     padding-top: 0;
     text-align:center;
+    line-height:110px;
     float: left;
 }
     
@@ -19,6 +20,7 @@ header{
     margin-right: 10px;
 }
 nav{
+    height:19px;
     text-align: center; /* пункты и текст горизонтально по центру */
     background: #c9b2c9;
     padding-top: 0%;
@@ -61,21 +63,17 @@ table, th, td{
 th{
     background-color: #dcd0ff;
 }
-tr:hover{
-    background-color:#c7afc7;
-}
 tr:nth-child(even){
     background-color: #ccf2ff;
 }
 footer{
-    bottom:0;
-    left:0;
-    width:100%;
-    height: 70px;
-    padding-top: 20px;
-    background-color: hsl(220, 47%, 87%);
+    width: 100%;
+    height: 110px;
+    background-color:#d8bfd8;
+    background-image: url(https://abrakadabra.fun/uploads/posts/2022-02/1645600755_1-abrakadabra-fun-p-fon-goluboi-gradient-nezhnii-2.jpg)
 }
 .footer{
     font-size:20px;
     padding-left:29px;
+    line-height:100px;
 }

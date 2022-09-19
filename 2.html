@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+  <html lang="ru">
+  <head>
+    <title>My website</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <header>
+    <div> <img id="logo" src="123.png" alt="Логотип" />
+     <text class="title">My website</text>
+    </div>
+    </header>
+    <div>
+    <nav>
+      <ul id="menu">
+        <li><a href="#:~:text=%D0%9D%D1%83%D0%BC%D0%B5%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9%20%D1%81%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%B3%D0%B8%D0%BF%D0%B5%D1%80%D1%81%D1%81%D1%8B%D0%BB%D0%BE%D0%BA" title="Список гиперссылок">Список гиперссылок</a></li>
+        <li><a href="#:~:text=%D0%A2%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0%3A" title="т">Таблица</a></li>
+        <li><a href="#:~:text=%D0%A4%D0%BE%D1%80%D0%BC%D0%B0%3A" title="форма">Форма</a></li>
+    </ul>
+  </nav>
+  </div>
+  </head>
+  <body>
+    <div>
+    <h2>Нумерованный список гиперссылок</h2>
+    <ol> 
+      <li><a href="http://example.com/">example</a></li>
+      <li><a href="https://example.com/">example</a></li>
+      <li><a href="ftp://example.com/file/1.txt/">ссылка на файл на сервере FTP без авторизации</a></li>
+      <li><a href="ftp://account:password@example.com/file/1.txt/">ссылка на файл на сервере FTP с авторизацией</a></li>
+      <li><a href="http://example.com#fragment"> ссылка на фрагмент страницы некоторого сайта</a></li>
+      <li><a id="fragment"> </a> <a href="fragment">ссылка на фрагмент текущей страницы</a></li>
+       <li><a href="http://example.com?size=m&color=white">ссылка с двумя параметрами в URL</a></li>
+      <li> 
+          <ul>
+            <li><a href="#about" title="О компании">О компании</a></li>
+            <li><a href="#services" title="Услуги">Услуги</a></li>
+            <li><a href="#contacts" title="Контакты">Контакты</a></li>
+        </ul>
+        
+      </li>
+    
+      <li><a> http://example.com </a></li>
+      <li><a href=""> ссылка с пустым href </a></li>
+       <li><a href="http://example.com/" rel="nofollow">ссылка, по которой запрещен переход поисковикам </a></li>
+      <li><a href="http://example.com/" rel="noindex">ссылка,  запрещенная для индексации поисковиками</a></li>
+      <li><p>Впервые <a href="https://kubsu.ru//">Кубанский государственный университет</a> был открыт в Краснодаре 5 (19) сентября 1920 года.</p></li>
+      <li><a href="https://ya.ru/"><img src="https://static.tildacdn.com/tild3039-3364-4830-a562-386362373332/png-transparent-busi.png" height="160" alt="Яндекс" /></a></li>
+      <li><img src="https://puzzleaday.files.wordpress.com/2019/08/round-triangle-e1566103930581.png" usemap="#panel" height="160" alt="Картинка" >
+        <map name="panel">
+            <area href="http://example.com/" shape="circle" coords="60,80,60"  alt="Круг" title="Круг">
+            <area href="https://egemaximum.ru/pryamougolnik/" shape="rect" coords="148,28,258,138"  alt="Квадрат" title="Квадрат">
+        </map></li>
+      <li><a href="сourse">относительная ссылка на страницу в текущем каталоге</a></li>
+      <li><a href="./about/example">относительная ссылка на страницу в каталоге about</a></li>
+       <li><a href="../index.html"> относительная ссылка на страницу в каталоге уровнем выше текущего </a></li>
+      <li><a href="../../index.html"> относительная ссылка на страницу в каталоге двумя уровнями выше </a></li>
+       <li><a href="/">  сокращенная на главную</a></li>
+      <li><a href="/next">  сокращенная на внутреннюю</a></li>
+    </ol> 
+    <h2>Таблица:</h2>
+    <table class="table">
+        <thead>
+            <tr>
+             <th>№ п/п</th>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Дата рождения</th>
+            <th>Дата регистрации</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Иван</td>
+                <td>Иванов</td>
+                <td>01.01.2000</td>
+                <td>02.04.2004</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Петр</td>
+                <td>Петров</td>
+                <td>04.07.1996</td>
+                <td>24.04.2014</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Камилла</td>
+                <td>Камиллова</td>
+                <td colspan="2">03.03.2003</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Елизавета</td>
+                <td>Лаштабега</td>
+                <td colspan="2">29.07.2003</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Даниил</td>
+                <td>Некрасов</td>
+                <td>21.05.2003</td>
+                <td>21.12.2022</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Ирина</td>
+              <td>Рогулина</td>
+              <td>04.08.1988</td>
+              <td>27.11.1989</td>
+          </tr>
+        </tbody>
+    </table>
+    <div>
+      <h2>Форма:</h2>
+      <form action="index.html" method="POST">
+    
+          <p> Имя:</p>
+          <label><input type="text"  name="field_name"  placeholder="Введите имя"></label>
+      
+        <p>E-mail:</p>
+          <label> <input type="email"  name="field-email"  placeholder="Введите  email"></label>
+        
+        <p>Дата рождения:</p>
+          <label><input type="date"  name="field-date" value="1900-01-01" > </label>
+        
+          <p>Пол:</p>
+        <label><input type="radio" name="radio-group-2" value="Значение1" />Женский</label><br />
+        <label><input type="radio" name="radio-group-2" value="Значение2" />Мужской</label><br />
+        
+           <p>Количество конечностей:</p>
+        <label><input type="radio"  name="radio-group-1" value="Значение1" />2</label><br />
+          <label><input type="radio" name="radio-group-1" value="Значение3" />3</label><br />
+          <label><input type="radio" name="radio-group-1" value="Значение4" />4</label><br />
+        
+          <p>Сверхспособности:</p>
+        <label>
+          <select name="field-liest" multiple="multiple">
+          <option value="Значение1">бессмертие</option>
+          <option value="Значение2" >прохождение сквозь стены</option>
+           <option value="Значение3" >левитация</option>
+         </select>
+        </label>
+        <p> Биография: </p>
+        <label>
+          <textarea name="field-text" placeholder="Расскажите о себе"></textarea>
+        </label><br>
+        
+        <label><input type="checkbox" name="check-1" /><strong>C контрактом ознакомлен(а)</strong></label><br />
+        <input type="submit" value="Отправить">
+
+       </form>
+    </div>
+      </div>
+      <footer>
+        <div> <text class="footer">(c)Дарья Медведева 2022</text></div>
+      </footer>
+  </body>
+</html>

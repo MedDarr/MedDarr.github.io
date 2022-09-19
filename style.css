@@ -45,3 +45,24 @@ div{
    margin-left: auto;
    margin-right: auto;
 }
+table{
+    border-collapse:collapse;
+    width:50%;
+    margin-bottom: 20px;
+}
+table, th, td{
+    border: 1px solid gray;
+}
+.table th, td{
+    height:50px;
+    text-align: center;
+}
+th{
+    background-color: #dcd0ff;
+}
+tr:hover{
+    background-color:#c7afc7;
+}
+tr:nth-child(even){
+    background-color: #ccf2ff;
+}

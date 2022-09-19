@@ -54,7 +54,7 @@ table{
     margin-bottom: 20px;
 }
 table, th, td{
-    border: 1px solid gray;
+    border: 1px solid black;
 }
 .table th, td{
     height:50px;
@@ -64,7 +64,7 @@ th{
     background-color: #dcd0ff;
 }
 tr:nth-child(even){
-    background-color: grey;
+    background-color: #d7d7d7;
 }
 footer{
     width: 100%;

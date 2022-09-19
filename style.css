@@ -1,21 +1,27 @@
 header{
     width: 100%;
-    height: 90px;
+    height: 110px;
     background-color:#d8bfd8;
     background-image: url(https://abrakadabra.fun/uploads/posts/2022-02/1645600755_1-abrakadabra-fun-p-fon-goluboi-gradient-nezhnii-2.jpg);
 }
 .title{
-    font-size: 30px;
+    font-size: 50px;
     font-family: serif ;
-    padding-top: 20px;
+    padding-top: 0;
     text-align:center;
+    float: left;
 }
     
 #logo {
-    width: 90px;
-    height: 90px;
+    width: 110px;
+    height: 110px;
     float: left;
     margin-right: 10px;
+}
+nav{
+    text-align: center; /* пункты и текст горизонтально по центру */
+    background: #c9b2c9;
+    padding-top: 0%;
 }
 ul#menu li{
     display:inline-block; 
@@ -29,11 +35,6 @@ ul#menu li{
     padding: 10px 25px; /* задаем внутренние отступы */
     color: #fff; /* цвет текста */
     text-decoration: none; /* убрать нижнее подчёркивание у ссылок */
-}
-#menu{
-
-    text-align: center; /* пункты и текст горизонтально по центру */
-    background: #c9b2c9;
 }
 #menu a:hover {
     background: #e6b8f0; /* фон пунктов при наведении */
@@ -65,4 +66,16 @@ tr:hover{
 }
 tr:nth-child(even){
     background-color: #ccf2ff;
+}
+footer{
+    bottom:0;
+    left:0;
+    width:100%;
+    height: 70px;
+    padding-top: 20px;
+    background-color: hsl(220, 47%, 87%);
+}
+.footer{
+    font-size:20px;
+    padding-left:29px;
 }

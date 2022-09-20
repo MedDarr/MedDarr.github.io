@@ -76,7 +76,7 @@ footer{
     background-image: url(https://abrakadabra.fun/uploads/posts/2022-02/1645600755_1-abrakadabra-fun-p-fon-goluboi-gradient-nezhnii-2.jpg)
 }
 .footer{
-    mardin:0;
+    margin:0;
     padding:0;
     font-size:20px;
     padding-left:29px;

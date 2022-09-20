@@ -64,7 +64,7 @@ table, th, td{
     text-align: center;
 }
 th{
-    background-color: #dcd0ff;
+    background-color: #f5b0f5;
 }
 tr:nth-child(even){
     background-color: #d7d7d7;

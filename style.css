@@ -5,6 +5,8 @@ header{
     background-image: url(https://abrakadabra.fun/uploads/posts/2022-02/1645600755_1-abrakadabra-fun-p-fon-goluboi-gradient-nezhnii-2.jpg);
 }
 .title{
+    margin:0;
+    padding:0;
     font-size: 50px;
     font-family: serif ;
     padding-top: 0;
@@ -34,6 +36,7 @@ ul#menu li{
     padding: 0; /* убрать внешние отступы */
 }
 #menu a {
+    margin:10px;
     padding: 10px 25px; /* задаем внутренние отступы */
     color: #fff; /* цвет текста */
     text-decoration: none; /* убрать нижнее подчёркивание у ссылок */
@@ -73,6 +76,8 @@ footer{
     background-image: url(https://abrakadabra.fun/uploads/posts/2022-02/1645600755_1-abrakadabra-fun-p-fon-goluboi-gradient-nezhnii-2.jpg)
 }
 .footer{
+    mardin:0;
+    padding:0;
     font-size:20px;
     padding-left:29px;
     line-height:100px;

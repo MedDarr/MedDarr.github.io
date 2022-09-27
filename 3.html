@@ -2,15 +2,15 @@
   <html lang="ru">
   <head>
        <title>My website</title>
-    <link rel="stylesheet" href="style3.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
   </head>
   <body>
     <header>
-      <div> <img id="logo" src="123.png" alt="Логотип" />
+      <div class="header"> <img id="logo" src="123.png" alt="Логотип" />
             <p class="title">My website</p>
       </div>
    </header>
-   <div>
+   <div class="block"> 
       <nav>
         <ul id="menu">
           <li><a href="#p1" title="Список гиперссылок">Список гиперссылок</a></li>
@@ -106,39 +106,41 @@
           </tr>
         </tbody>
     </table>
-    <div class="forma">
-      <h2 id="p3">Форма:</h2>
+    <h2 id="p3">Форма:</h2>
+    <div class="form">
       <form action="index.html" method="POST">
 
-          <p> Имя:</p>
-          <label><input type="text"  name="field_name"  placeholder="Введите имя"></label>
+        <label> Имя:<br/>
+        <input type="text"  name="field_name"  placeholder="Введите имя">
+        </label>
       
-        <p>E-mail:</p>
-        <label> <input type="email"  name="field-email"  placeholder="Введите  email"></label>
+        <label><br/>E-mail:<br/>
+        <input type="email"  name="field-email"  placeholder="Введите  email">
+        </label>
         
-        <p>Дата рождения:</p>
-          <label><input type="date"  name="field-date" value="1900-01-01" > </label>
+        <label><br/>Дата рождения:<br/>
+        <input type="date"  name="field-date" value="1900-01-01" > 
+          </label>
         
-          <p>Пол:</p>
-        <label><input type="radio" name="radio-group-2" value="Значение1" />Женский</label><br />
-        <label><input type="radio" name="radio-group-2" value="Значение2" />Мужской</label><br />
+          <label><br/>Пол:<br/>
+        <input type="radio" name="radio-group-2" value="Значение1" />Женский</label>
+        <label><input type="radio" name="radio-group-2" value="Значение2" />Мужской</label>
         
-           <p>Количество конечностей:</p>
-        <label><input type="radio"  name="radio-group-1" value="Значение1" />2</label><br />
-          <label><input type="radio" name="radio-group-1" value="Значение3" />3</label><br />
-          <label><input type="radio" name="radio-group-1" value="Значение4" />4</label><br />
-        
-          <p>Сверхспособности:</p>
+           <label><br/>Количество конечностей:<br/>
+          <input type="radio"  name="radio-group-1" value="Значение1" />2</label>
+          <label><input type="radio" name="radio-group-1" value="Значение3" />3</label>
+          <label><input type="radio" name="radio-group-1" value="Значение4" />4</label>
         <label>
+          <br/>Сверхспособности:<br/>
           <select name="field-liest" multiple="multiple">
           <option value="Значение1">бессмертие</option>
           <option value="Значение2" >прохождение сквозь стены</option>
            <option value="Значение3" >левитация</option>
          </select>
         </label>
-        <p> Биография: </p>
         <label>
-          <textarea name="field-text" placeholder="Расскажите о себе"></textarea>
+        <br/>Биография:<br/>
+        <textarea name="field-text" placeholder="Расскажите о себе"></textarea>
         </label><br>
         
         <label><input type="checkbox" name="check-1" /><strong>C контрактом ознакомлен(а)</strong></label><br />
@@ -149,7 +151,8 @@
     <br>
       </div>
       <footer>
-       <p class="footer">(c)Дарья Медведева 2022</p>
+        <div class="block">(c)Дарья Медведева 2022</div>
+
       </footer>
   </body>
 </html>

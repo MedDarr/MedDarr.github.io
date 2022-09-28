@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
   <html lang="ru">
   <head>
-       <title>My website</title>
-    <link rel="stylesheet" href="style3.css" type="text/css">
+    <title>My website</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
   </head>
   <body>
     <header>
       <div class="header"> <img id="logo" src="123.png" alt="Логотип" />
-            <p class="title">My website</p>
+         <p class="title">My website</p>
       </div>
    </header>
    <div class="block"> 
@@ -18,8 +18,9 @@
           <li><a href="#p3" title="форма">Форма</a></li>
         </ul>
       </nav>
-     <h2 id="p1">Нумерованный список гиперссылок</h2>
-     <ol> 
+    
+     <ol class="ahr"> 
+        <h1 id="p1">Нумерованный список гиперссылок</h1>
         <li><a href="http://example.com/">example</a></li>
         <li><a href="https://example.com/">example</a></li>
         <li><a href="ftp://example.com/file/1.txt/">ссылка на файл на сервере FTP без авторизации</a></li>
@@ -52,8 +53,9 @@
         <li><a href="/">  сокращенная на главную</a></li>
         <li><a href="/next">  сокращенная на внутреннюю</a></li>
     </ol> 
-    <h2 id="p2">Таблица:</h2>
-    <table class="table">
+    <div class="table">
+    <h1 id="p2">Таблица:</h1><br/>
+      <table>
         <thead>
             <tr>
               <th>№ п/п</th>
@@ -106,8 +108,11 @@
           </tr>
         </tbody>
     </table>
-    <h2 id="p3">Форма:</h2>
+    <br/>
+    </div>
     <div class="form">
+     <h1 id="p3">Форма:</h1>
+    <div class="form-decor">
       <form action="index.html" method="POST">
 
         <label> Имя:<br/>
@@ -148,10 +153,11 @@
 
        </form>
     </div>
-    <br>
-      </div>
+    </div>
+  </div>
+    <br/>
       <footer>
-        <div class="block">(c)Дарья Медведева 2022</div>
+        <div class="block">(c) Дарья Медведева 2022 г.</div>
 
       </footer>
   </body>

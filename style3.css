@@ -130,6 +130,9 @@ footer{
     .header{
         width: 960px;
     }
+     #menu a{
+        padding:10px 10px;
+    }
     #menu, #menu li {
         margin: 0; /* убрать внутренние отступы */
         padding: 0; /* убрать внешние отступы */

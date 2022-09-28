@@ -1,8 +1,13 @@
  header{
+    display:flex;
+    flex-direction:row;
     width: 100%;
     height: 110px;
     background-color:#d8bfd8;
     background-image: url(https://abrakadabra.fun/uploads/posts/2022-02/1645600755_1-abrakadabra-fun-p-fon-goluboi-gradient-nezhnii-2.jpg);
+}
+.header{
+    width:100%;
 }
 .title{
     margin:0;
@@ -21,17 +26,16 @@
     margin-right: 10px;
 }
 
- nav{
+nav{
+    display:flex;
+    flex-direction: column;
     width:100%;
-    text-align: center; /* пункты и текст горизонтально по центру */
     background-color: #c9b2c9;
     padding-top: 0%;
 }
-#menu li{
-    display:block; 
-    text-align: center;
-}
+
 #menu, #menu li {
+    text-align: center;
     margin: 0; /* убрать внутренние отступы */
     padding: 0; /* убрать внешние отступы */
 }
@@ -50,15 +54,17 @@
    justify-content: stretch;
    align-items: center;
 }
-table{
-    border-collapse:collapse;
+.table{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
     width:100%;
-    margin-bottom: 20px;
+    order: 2;
 }
 table, th, td{
+    border-collapse: collapse;
     border: 1px solid black;
-}
-.table th, td{
     height:50px;
     text-align: center;
 }
@@ -68,101 +74,88 @@ th{
 tr:nth-child(even){
     background-color: #d7d7d7;
 }
-footer{
-    width: 100%;
-    height: 110px;
-    background-color:#d8bfd8;
-    background-image: url(https://abrakadabra.fun/uploads/posts/2022-02/1645600755_1-abrakadabra-fun-p-fon-goluboi-gradient-nezhnii-2.jpg);
-    margin: 0;
-    padding:0;
-    font-size: 16px;
-    font-family: 'Times New Roman', Times, serif;
-    padding-top: 0;
-    line-height: 100px;
-}
+
 .form{
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+    order:1;
+}
+.form-decor{
     font-family: 'Times New Roman', Times, serif;
     font-size: x-large;
     width: auto;
     border:3px solid black;
     margin:0;
+}
+h1{
+    text-align: center;
+}
+.ahr{
     display: flex;
-    justify-content: center;
-    position: relative;
+    flex-direction: column;
+    width: 100%;
+    font-size: 20px;
+}
+.ahr li{
+    justify-content: stretch;
+    align-items: stretch;
+    margin-left: 50px;
+}
+.ahr a{
+    font-size: 20px;
+    font-family: serif;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 110px;
+    background-color:#d8bfd8;
+    background-image: url(https://abrakadabra.fun/uploads/posts/2022-02/1645600755_1-abrakadabra-fun-p-fon-goluboi-gradient-nezhnii-2.jpg);
+}
+.footer{
+    margin: 0;
+    padding:0;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 0;
+    line-height: 110px;
 }
 @media  (min-width: 1080px) {
+    header{
+        align-items: center;
+        justify-content: center;
+    }
     .header{
         width: 960px;
-        display:block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    nav{
-        text-align: center; /* пункты и текст горизонтально по центру */
-        background-color: #c9b2c9;
-        padding-top: 0%;
-    }
-    ul#menu li{
-        display:inline-block;
-        text-align: center;
     }
     #menu, #menu li {
         margin: 0; /* убрать внутренние отступы */
         padding: 0; /* убрать внешние отступы */
-    }
-    #menu a {
-        margin:10px;
-        padding: 10px 10px; /* задаем внутренние отступы */
-        color: #fff; /* цвет текста */
-        text-decoration: none; /* убрать нижнее подчёркивание у ссылок */
-    }
-    #menu a:hover {
-        background: #1c04f1; /* фон пунктов при наведении */
+        display: inline-block;
+        text-align: center;
     }
     .block{
         width:960px;
-        display: block;
         margin-left: auto;
         margin-right: auto;
      }
      table{
-        border-collapse:collapse;
-        width:50%;
-        margin-bottom: 20px;
-    }
-    table, th, td{
-        border: 1px solid black;
-    }
-    .table th, td{
-        height:50px;
-        text-align: center;
-    }
-    th{
-        background-color: #eebef1;
-    }
-    tr:nth-child(even){
-        background-color: #d7d7d7;
+        justify-content: center;
+        align-items: center;
+        width:auto;
+        order:1;
     }
     .form{
-        width: 210pt;
-        border:3px solid black;
-        margin:0;
-        padding: 5px;
-        position: relative;
-        font-size: medium;
+        order:2;
     }
     footer{
-        width: 100%;
-        height: 110px;
-        background-color:#d8bfd8;
-        background-image: url(https://abrakadabra.fun/uploads/posts/2022-02/1645600755_1-abrakadabra-fun-p-fon-goluboi-gradient-nezhnii-2.jpg);
-        margin: 0;
-        padding:0;
-        font-size: 16px;
-        font-family: 'Times New Roman', Times, serif;
-        padding-top: 0;
-        line-height: 100px;
+        align-items: center;
+        justify-content: center;
     }
-
+    .footer{
+       width: 960px;
+    }
    
 }

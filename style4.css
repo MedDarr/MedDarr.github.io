@@ -1,0 +1,26 @@
+header{
+    background-color:#d8bfd8;
+    background-image: url(https://abrakadabra.fun/uploads/posts/2022-02/1645600755_1-abrakadabra-fun-p-fon-goluboi-gradient-nezhnii-2.jpg);
+}
+
+nav{
+    background: #c9b2c9;
+}
+#menu a {
+    color: #fff; /* цвет текста */
+    text-decoration: none; /* убрать нижнее подчёркивание у ссылок */
+}
+#menu a:hover {
+    background: #e6b8f0; /* фон пунктов при наведении */
+}
+
+th{
+    background-color: #eebef1;
+}
+tr:nth-child(even){
+    background-color: #d7d7d7;
+}
+footer{
+    background-color:#d8bfd8;
+    background-image: url(https://abrakadabra.fun/uploads/posts/2022-02/1645600755_1-abrakadabra-fun-p-fon-goluboi-gradient-nezhnii-2.jpg)
+}

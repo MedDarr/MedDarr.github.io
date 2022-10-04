@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+ <html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>My website</title>
+        <link rel="stylesheet" href="style4.css" type="text/css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><!-- Дополнение к теме -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      
+      </head>
+    <body>
+        <header class="text-left">
+            <div class="container-lg">
+                <H1><img  src="123.png" alt="Логотип"  class="" width="100px">My website</H1>
+            </div>       
+        </header>
+        <nav class="navbar navbar-expand-lg navbar-light"></div>
+            <div class="navbar">
+                <ul class="navbar-nav" id="menu">
+                    <li class="nav-items"><a class="nav-link" href="#p1" title="Список гиперссылок">Список гиперссылок</a></li>
+                    <li class="nav-items"><a class="nav-link" href="#p2" title="таблица">Таблица</a></li>
+                    <li class="nav-items"><a class="nav-link" href="#p3" title="форма">Форма</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-lg">
+            <h2 id="p1" class="text-center">Нумерованный список гиперссылок</h2>
+            <ol> 
+                <li><a href="http://example.com/">example</a></li>
+                <li><a href="https://example.com/">example</a></li>
+                <li><a href="ftp://example.com/file/1.txt/">ссылка на файл на сервере FTP без авторизации</a></li>
+                <li><a href="ftp://account:password@example.com/file/1.txt/">ссылка на файл на сервере FTP с авторизацией</a></li>
+                <li><a href="http://example.com#fragment"> ссылка на фрагмент страницы некоторого сайта</a></li>
+                <li><a id="fragment"> </a> <a href="fragment">ссылка на фрагмент текущей страницы</a></li>
+                <li><a href="http://example.com?size=m&color=white">ссылка с двумя параметрами в URL</a></li>
+                <li> 
+                    <ul>
+                    <li><a href="#about" title="О компании">О компании</a></li>
+                    <li><a href="#services" title="Услуги">Услуги</a></li>
+                    <li><a href="#contacts" title="Контакты">Контакты</a></li>
+                    </ul>
+                </li>
+                <li><a> http://example.com </a></li>
+                <li><a href=""> ссылка с пустым href </a></li>
+                <li><a href="http://example.com/" rel="nofollow">ссылка, по которой запрещен переход поисковикам </a></li>
+                <li><a href="http://example.com/" rel="noindex">ссылка,  запрещенная для индексации поисковиками</a></li>
+                <li><p>Впервые <a href="https://kubsu.ru//">Кубанский государственный университет</a> был открыт в Краснодаре 5 (19) сентября 1920 года.</p></li>
+                <li><a href="https://ya.ru/"><img src="https://static.tildacdn.com/tild3039-3364-4830-a562-386362373332/png-transparent-busi.png" height="160" alt="Яндекс"></a></li>
+                <li><img src="https://puzzleaday.files.wordpress.com/2019/08/round-triangle-e1566103930581.png" usemap="#panel" height="160" alt="Картинка" >
+                <map name="panel">
+                    <area href="http://example.com/" shape="circle" coords="64,83,55"  alt="Круг" title="Круг">
+                    <area href="https://egemaximum.ru/pryamougolnik/" shape="rect" coords="148,28,258,138"  alt="Квадрат" title="Квадрат">
+                </map></li>
+                <li><a href="сourse">относительная ссылка на страницу в текущем каталоге</a></li>
+                <li><a href="./about/example">относительная ссылка на страницу в каталоге about</a></li>
+                <li><a href="../index.html"> относительная ссылка на страницу в каталоге уровнем выше текущего </a></li>
+                <li><a href="../../index.html"> относительная ссылка на страницу в каталоге двумя уровнями выше </a></li>
+                <li><a href="/">  сокращенная на главную</a></li>
+                <li><a href="/next">  сокращенная на внутреннюю</a></li>
+            </ol> 
+        </div>
+        <div class="container-lg">
+            <h2 id="p2" class="text-center">Таблица:</h2>
+            <table class="table table-striped table-bordered border-dark text-center">
+                <thead>
+                    <tr>
+                        <th>№ п/п</th>
+                        <th>Имя</th>
+                        <th>Фамилия</th>
+                        <th>Дата рождения</th>
+                        <th>Дата регистрации</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Иван</td>
+                        <td>Иванов</td>
+                        <td>01.01.2000</td>
+                        <td>02.04.2004</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Петр</td>
+                        <td>Петров</td>
+                        <td>04.07.1996</td>
+                        <td>24.04.2014</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Камилла</td>
+                        <td>Камиллова</td>
+                        <td colspan="2">03.03.2003</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Елизавета</td>
+                        <td>Лаштабега</td>
+                        <td colspan="2">29.07.2003</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Даниил</td>
+                        <td>Некрасов</td>
+                        <td>21.05.2003</td>
+                        <td>21.12.2022</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Ирина</td>
+                        <td>Рогулина</td>
+                        <td>04.08.1988</td>
+                        <td>27.11.1989</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="container-lg">
+            <h1 id="p3" class="text-center">Форма:</h1>
+            <form role="form" action="index.html" method="POST">
+                <div class="form-group">
+                    <label for="name">Имя:</label>
+                    <input type="name" class="form-control" id="name" placeholder="Введите имя">
+                </div>
+                    
+                <div class="form-group">
+                    <label for="email">E-mail:</label> 
+                    <input type="email" class="form-control" id="email" placeholder="Введите E-mail">
+                </div>
+        
+                <div class="form-group">
+                    <label for="hb">Дата рождения:</label> 
+                    <input type="date" class="form-control" id="date">
+                </div>
+        
+                <div class="form-group">
+                    <label for="gender">Пол:</label> 
+                    <div><label><input type="radio" name="radio-group" value="Значение1" >Женский</label> </div>
+                    <div> <label><input type="radio" name="radio-group" value="Значение2" >Мужской</label></div>
+                </div>
+                        
+                <div class="form-group">
+                    <label for="limb">Количество конечностей:</label> 
+                    <div><label><input type="radio" name="radio-group1" value="Значение4" >2</label></div>
+                    <div><label><input type="radio" name="radio-group1" value="Значение5" >3</label></div>
+                    <div><label><input type="radio" name="radio-group1" value="Значение6" >4</label></div>
+                </div>
+        
+                <div class="form-group">
+                    <label for="superabilities">Сверхспособности:</label> 
+                    <select class="form-select">
+                        <option selected>Нет</option>
+                        <option value="Значение7">Бессмертие</option>
+                        <option value="Значение8">Прохождение сквозь стены</option>
+                        <option value="Значение9">Левитация</option>
+                    </select>
+                </div>
+        
+                <div class="form-group">
+                    <label for="bio">Биография:</label> 
+                    <textarea class="form-control" placeholder="Расскажите о себе"></textarea>
+                </div>
+                
+                <div class="checkbox"><label> <input type="checkbox">C контрактом ознакомлен(а)</label></div>
+                <button type="button" class="btn btn-success">Отправить</button>
+            </form>
+        </div>
+        <br>     
+        <footer>
+            <div class="container-lg">
+                <h5><small>(c) Медведева Дарья  2022 г.</small></h5>
+            </div>
+        </footer>
+    </body>
+</html>

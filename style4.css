@@ -4,6 +4,7 @@ header{
 }
 
 nav{
+    height: auto;
     background: #c9b2c9;
 }
 #menu a {
@@ -14,7 +15,7 @@ nav{
     background: #e6b8f0; /* фон пунктов при наведении */
 }
 
-th{
+thead{
     background-color: #eebef1;
 }
 tr:nth-child(even){

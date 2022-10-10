@@ -13,3 +13,8 @@ function cost(){
     }
     return false;
 }
+function ready() {
+    console.log("DOM is ready");
+}
+
+document.addEventListener("DOMContentLoaded",ready);

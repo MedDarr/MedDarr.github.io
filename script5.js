@@ -5,7 +5,7 @@ function cost(){
     var num2 =document.getElementById('quantity').value;
     let res=document.getElementById('result');
     if( (isNaN(num1) || num1<0) && ( isNaN(num2)|| num2<0 || (Number.isInteger(num2))))
-    { res.innerHTML = "Введены неккоректные данные";}
+    { res.innerHTML = "Введены некорректные данные";}
     else if( isNaN(num2) || num2<0 || (Number.isInteger(num2)))  res.innerHTML = "Введено неверное количество товара";
     else if(isNaN(num1) || num1<0)  res.innerHTML = "Введена неверная цена ";
     else{ var result=num1*num2;

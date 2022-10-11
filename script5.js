@@ -15,8 +15,8 @@ function cost(){
     }
     return false;
 }
-function ready() {
-    console.log("DOM is ready");
-}
-
-document.addEventListener("DOMContentLoaded",ready);
+window.addEventListener('DOMContentLoaded', function (event) {
+    console.log("DOM fully loaded and parsed");
+    let b=document.getElementById("my-button");
+    b.addEventListener("click", cost);
+});

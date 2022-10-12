@@ -8,9 +8,9 @@ function cost(){
     const price=/^(0|[1-9]+\.?\d*)$/;
     if( (!price.test(num1) && !kol.test(num2) ))
     { res.innerHTML = "Введены некорректные данные";}
-    else if( !price.test(num1))  res.innerHTML = "Введено неверное количество товара";
-    else if(!kol.test(num2))  res.innerHTML = "Введена неверная цена ";
-    else{ var result=num1*num2;
+    else if( !price.test(num1))  res.innerHTML = "Введена неверная цена ";
+    else if(!kol.test(num2))  res.innerHTML = "Введено неверное количество товара";
+    else{  result=num1*num2;
         res.innerHTML ="Стоимость заказа: "+ result;
     }
     return false;
@@ -20,3 +20,4 @@ window.addEventListener('DOMContentLoaded', function (event) {
     let b=document.getElementById("my-button");
     b.addEventListener("click", cost);
 });
+

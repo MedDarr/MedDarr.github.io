@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style6.css">
-        <script src="script6.js" defer></script>
+        <script src="script6-1.js" defer></script>
         <title>Калькулятор стоимости заказа</title>
 
     </head>
@@ -13,22 +13,21 @@
             <h1>Калькулятор стоимости заказа</h1>
 
             <p> Выберите модель сумки</p>
-                <select name="field-liest" >
+                <select name="prodType" >
                     <option value="1"> Клатч</option>
                     <option value="2" >Тоут</option>
                     <option value="3" >Шоппер</option>
-                    <option value="4" >Рюкзак</option>
                    </select>
 
-                   <div class="myradio" id="myradio">
+                   <div class="radio" id="radios">
                     <p>Стиль:</p>
-                    <label><input type="radio"  name="radio-group-1" value="Значение1" >Casual</label>
-                    <label> <input type="radio" name="radio-group-1" value="Значение2" >Деловой</label>
-                    <label>  <input type="radio" name="radio-group-1" value="Значение3" >Винтаж</label>
-                    <label> <input type="radio" name="radio-group-1" value="Значение4" >Этнический</label>
-                    <label> <input type="radio" name="radio-group-1" value="Значение5" >Бохо</label>
+                    <label><input type="radio"  name="prodOptions" value="r1" >Casual</label>
+                    <label> <input type="radio" name="prodOptions" value="r2" >Деловой</label>
+                    <label>  <input type="radio" name="prodOptions" value="r3" >Винтаж</label>
+                    <label> <input type="radio" name="prodOptions" value="r4" >Этнический</label>
+                    <label> <input type="radio" name="prodOptions" value="r5" >Бохо</label>
                   </div>
-                  <div class="check" id="check">
+                  <div class="check" id="checkboxes">
                     <p>Материал</p>
                   <lable><input type="checkbox" name="m1" >Текстиль</lable>
                   <lable><input type="checkbox" name="m2">Искусственая кожа</lable>
@@ -36,11 +35,9 @@
                   <lable><input type="checkbox" name="m4">Искусственая замша</lable>
                   <lable><input type="checkbox" name="m5">термополиуретан</lable>
                   </div>
-            
-            <p>Введите количество:</p>
-            <input type="text"  name="field-quantity"  id="quantity" placeholder="Введите  количество">
-            
-            <button onclick=" return cost()" id="my-button">Рассчитать</button>
+                    <div>Количество товара:</div>
+                    <input name="field4" type="text" />
+            <button onclick="return calc()" id="button">Рассчитать</button>
             <p id="result"> Результат:  </p><br>
         </form> 
 

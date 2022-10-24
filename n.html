@@ -1,49 +1,90 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="style6.css">
-        <script src="scriptn.js" defer></script>
-        <title>Калькулятор стоимости заказа</title>
-
-    </head>
-    <body>
-        <div class="form">
-            <form action="index.html" method="POST" id="form1">
-            <h1>Калькулятор стоимости заказа</h1>
-            <div>За 1 штуку:</div>
-        <div id="result">0</div>
-
-            <p> Выберите модель сумки</p>
-                <select name="prodType" >
-                    <option value="1"> Клатч</option>
-                    <option value="2" >Тоут</option>
-                    <option value="3" >Шоппер</option>
-                   </select>
-
-                   <div class="radio" id="radios">
-                    <p>Стиль:</p>
-                    <label><input type="radio"  name="prodOptions" value="r1" >Casual</label>
-                    <label> <input type="radio" name="prodOptions" value="r2" >Деловой</label>
-                    <label>  <input type="radio" name="prodOptions" value="r3" >Винтаж</label>
-                    <label> <input type="radio" name="prodOptions" value="r4" >Этнический</label>
-                    <label> <input type="radio" name="prodOptions" value="r5" >Бохо</label>
-                  </div>
-                  <div class="check" id="checkboxes">
-                    <p>Материал</p>
-                  <lable><input type="checkbox" name="m1" >Текстиль</lable>
-                  <lable><input type="checkbox" name="m2">Искусственая кожа</lable>
-                  <label><input type="checkbox" name="m3">Полимер</label>
-                  <lable><input type="checkbox" name="m4">Искусственая замша</lable>
-                  <lable><input type="checkbox" name="m5">термополиуретан</lable>
-                  </div>
-                    <div>Количество товара:</div>
-                    <input name="field4" type="text" />
-            <button onclick="return itd_calc()" id="button">Рассчитать</button>
-            <p id="itd-result"> Результат:  </p><br>
-        </form> 
-
+<head>
+    <meta charset="utf-8">
+      <!-- Добавляем стили из CDN -->
+      <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick.css"/>
+      <!-- Добавляем тему по умолчанию из CDN -->
+      <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="nstyle.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+    <script src="jquery-3.4.1.min.js" defer></script>
+    <script src="nscript.js" defer></script>
+    <meta name="viewport" content="width=device-width, inital-scale=1, maximum-scale=1">
+    <title>Слайдер</title>
+</head>
+<body>
+    <div class="slider">
+        <div class="slide">
+           <div class="photo" style="background-image:url(https://i.pinimg.com/564x/81/fe/72/81fe72be8ab08437b4f5cc6cba77af53.jpg) ;"></div>
+           <div class="name">Изображение 1</div>
+        </div>
+        <div class="slide">
+            <div class="photo" style="background-image:url(https://i.pinimg.com/564x/9f/f8/6d/9ff86d48460c4355a717fe799b1e163c.jpg) ;"></div>
+            <div class="name">Изображение 2</div>
+         </div>
+          <div class="slide">
+           <div class="photo"  style="background-image:url(https://i.pinimg.com/564x/b5/5e/90/b55e903ae66246d7649d583d004e148a.jpg) ;"></div>
+           <div class="name">Изображение 3</div>
+        </div>
+        <div class="slide">
+            <div class="photo"  style="background-image:url(https://i.pinimg.com/564x/08/91/10/089110073e22f13ce779c45a2c6b4e6b.jpg) ;"></div>
+            <div class="name">Изображение 4</div>
+         </div>
+         <div class="slide">
+            <div class="photo"  style="background-image:url(https://i.pinimg.com/564x/50/f0/b1/50f0b1282983a6e785234457b36adfd4.jpg) ;"></div>
+            <div class="name">Изображение 5</div>
+         </div>
+         <div class="slide">
+            <div class="photo"  style="background-image:url(https://i.pinimg.com/564x/7e/a8/2b/7ea82bc6511ad46c263e10ac9ddf2777.jpg) ;"></div>
+            <div class="name">Изображение 6</div>
+         </div>
+         <div class="slide">
+            <div class="photo"  style="background-image:url(https://i.pinimg.com/564x/61/65/cd/6165cdf63351ff621539814a35bd6334.jpg) ;"></div>
+            <div class="name">Изображение 7</div>
+         </div>
+         <div class="slide">
+            <div class="photo"  style="background-image:url(https://i.pinimg.com/564x/28/00/b5/2800b5eea971ecfae9c4bddd7b18b539.jpg) ;"></div>
+            <div class="name">Изображение 8</div>
+         </div>
+         <div class="slide">
+            <div class="photo"  style="background-image:url(https://i.pinimg.com/564x/47/98/af/4798afe3b0d607fbd2b52daf4fb8df21.jpg) ;"></div>
+            <div class="name">Изображение 9</div>
+         </div>
+         <div class="slide">
+            <div class="photo"  style="background-image:url(https://i.pinimg.com/564x/7c/a1/df/7ca1df60722b5a7c4ce263ba5b6231c1.jpg) ;"></div>
+            <div class="name">Изображение 10</div>
+         </div>
+         <div class="slide">
+            <div class="photo"  style="background-image:url(https://i.pinimg.com/564x/32/f9/85/32f985c53992e8534fa124cd9c05ddc6.jpg) ;"></div>
+            <div class="name">Изображение 11</div>
+         </div>
+         <div class="slide">
+            <div class="photo"  style="background-image:url(https://i.pinimg.com/564x/2c/aa/f1/2caaf1abbb73ead8d3f4d9e9f1c37e55.jpg) ;"></div>
+            <div class="name">Изображение 12</div>
+         </div>
+         <div class="slide">
+            <div class="photo"  style="background-image:url(https://i.pinimg.com/564x/db/86/93/db86933caf83e7840abcbbcf48e2bdeb.jpg) ;"></div>
+            <div class="name">Изображение 13</div>
+         </div>
+         <div class="slide">
+            <div class="photo"  style="background-image:url(https://i.pinimg.com/564x/30/bf/dd/30bfddc3f6d0918953f95beed519713c.jpg) ;"></div>
+            <div class="name">Изображение 14</div>
+         </div>
+         <div class="slide">
+            <div class="photo"  style="background-image:url(https://i.pinimg.com/236x/21/65/c2/2165c24030eeb81ec31cd2c9e08f02e1.jpg) ;"></div>
+            <div class="name">Изображение 15</div>
+         </div>
+         <div class="slide">
+            <div class="photo"  style="background-image:url(https://i.pinimg.com/564x/1a/39/23/1a39232789b79433688349f7853e21b2.jpg) ;"></div>
+            <div class="name">Изображение 16</div>
+         </div>
     </div>
-        
-    </body>
+
+
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick.min.js"></script>
+</body>
 </html>
+

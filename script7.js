@@ -39,6 +39,7 @@ class ItcSlider {
     }
   
     constructor(selector, config) {
+      // СЌР»РµРјРµРЅС‚С‹ СЃР»Р°Р№РґРµСЂР°
       const $root = typeof selector === 'string' ? document.querySelector(selector) : selector;
       this._$root = $root;
       this._$wrapper = $root.querySelector(ItcSlider.WRAPPER_SELECTOR);
@@ -47,20 +48,27 @@ class ItcSlider {
       this._$controlPrev = $root.querySelector(ItcSlider.SELECTOR_PREV);
       this._$controlNext = $root.querySelector(ItcSlider.SELECTOR_NEXT);
       this._$indicatorList = $root.querySelectorAll(ItcSlider.SELECTOR_INDICATOR);
+      // СЌРєСЃС‚СЂРµРјР°Р»СЊРЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ СЃР»Р°Р№РґРѕРІ
       this._minOrder = 0;
       this._maxOrder = 0;
       this._$itemWithMinOrder = null;
       this._$itemWithMaxOrder = null;
       this._minTranslate = 0;
       this._maxTranslate = 0;
+      // РЅР°РїСЂР°РІР»РµРЅРёРµ СЃРјРµРЅС‹ СЃР»Р°Р№РґРѕРІ (РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ)
       this._direction = 'next';
+      // determines whether the position of item needs to be determined
       this._balancingItemsFlag = false;
       this._activeItems = [];
+      // С‚РµРєСѓС‰РµРµ Р·РЅР°С‡РµРЅРёРµ С‚СЂР°РЅСЃС„РѕСЂРјР°С†РёРё
       this._transform = 0;
+      // swipe РїР°СЂР°РјРµС‚СЂС‹
       this._hasSwipeState = false;
       this.__swipeStartPos = 0;
-      this._transform = 0; 
+      // slider properties
+      this._transform = 0; // С‚РµРєСѓС‰РµРµ Р·РЅР°С‡РµРЅРёРµ С‚СЂР°РЅСЃС„РѕСЂРјР°С†РёРё
       this._intervalId = null;
+      // configuration of the slider
       this._config = {
         loop: true,
         autoplay: false,
@@ -69,10 +77,13 @@ class ItcSlider {
         swipe: true,
       };
       this._config = Object.assign(this._config, config);
+      // create some constants
       const $itemList = this._$itemList;
       const widthItem = $itemList[0].offsetWidth;
+      // const widthWrapper = this._$wrapper.offsetWidth;
       const widthWrapper = this._$wrapper.getBoundingClientRect().width;
       const itemsInVisibleArea = Math.round(widthWrapper / widthItem);
+      // initial setting properties
       this._widthItem = widthItem;
       this._widthWrapper = widthWrapper;
       this._itemsInVisibleArea = itemsInVisibleArea;
@@ -82,6 +93,7 @@ class ItcSlider {
   
       this._el = $root;
   
+      // initial setting order and translate items
       for (let i = 0, length = $itemList.length; i < length; i++) {
         $itemList[i].dataset.index = i;
         $itemList[i].dataset.order = i;
@@ -91,7 +103,9 @@ class ItcSlider {
         }
       }
       if (this._config.loop) {
+        // РїРµСЂРµРјРµС‰Р°РµРј РїРѕСЃР»РµРґРЅРёР№ СЃР»Р°Р№Рґ РїРµСЂРµРґ РїРµСЂРІС‹Рј
         const count = $itemList.length - 1;
+        // const translate = -$itemList.length * 100;
         const translate = -$itemList.length * this._widthStep;
         $itemList[count].dataset.order = -1;
         $itemList[count].dataset.translate = translate;
@@ -193,13 +207,16 @@ class ItcSlider {
       $root.addEventListener('click', onClick.bind(this));
       $root.addEventListener('mouseenter', onMouseEnter.bind(this));
       $root.addEventListener('mouseleave', onMouseLeave.bind(this));
+      // on resize
       if (config.refresh) {
         window.addEventListener('resize', onResize.bind(this));
       }
+      // on transitionstart and transitionend
       if (config.loop) {
         $items.addEventListener('transition-start', onTransitionStart.bind(this));
         $items.addEventListener('transitionend', onTransitionEnd.bind(this));
       }
+      // on touchstart and touchend
       if (config.swipe) {
         $root.addEventListener('touchstart', onSwipeStart.bind(this));
         $root.addEventListener('mousedown', onSwipeStart.bind(this));
@@ -207,6 +224,7 @@ class ItcSlider {
         document.addEventListener('mouseup', onSwipeEnd.bind(this));
       }
       $root.addEventListener('dragstart', onDragStart.bind(this));
+      // РїСЂРё РёР·РјРµРЅРµРЅРёРё Р°РєС‚РёРІРЅРѕСЃС‚Рё РІРєР»Р°РґРєРё
       document.addEventListener('visibilitychange', onVisibilityChange.bind(this));
     }
     _refreshExtremeValues() {
@@ -248,9 +266,11 @@ class ItcSlider {
         clientRect = $min.getBoundingClientRect();
         if (clientRect.right < wrapperLeft - widthHalfItem) {
           $min.dataset.order = this._minOrder + count;
+          // translate += count * 100;
           translate += count * this._widthStep;
           $min.dataset.translate = translate;
           $min.style.transform = `translateX(${translate}px)`;
+          // update values of extreme properties
           this._refreshExtremeValues();
         }
       } else {
@@ -260,12 +280,15 @@ class ItcSlider {
         clientRect = $max.getBoundingClientRect();
         if (clientRect.left > wrapperRight + widthHalfItem) {
           $max.dataset.order = this._maxOrder - count;
+          // translate -= count * 100;
           translate -= count * this._widthStep;
           $max.dataset.translate = translate;
           $max.style.transform = `translateX(${translate}px)`;
+          // update values of extreme properties
           this._refreshExtremeValues();
         }
       }
+      // updating...
       requestAnimationFrame(this._balancingItems.bind(this));
     }
     _setActiveClass() {
@@ -297,10 +320,13 @@ class ItcSlider {
       }
     }
     _move() {
+      // const step = this._direction === 'next' ? -this._transformStep : this._transformStep;
       const step = this._direction === 'next' ? -this._widthStep : this._widthStep;
       let transform = this._transform + step;
       if (!this._config.loop) {
+        // const endTransformValue = this._transformStep * (this._$itemList.length - this._itemsInVisibleArea);
         const endTransformValue = this._widthStep * (this._$itemList.length - this._itemsInVisibleArea);
+        // transform = Math.round(transform * 10) / 10;
         if (transform < -endTransformValue || transform > 0) {
           return;
         }
@@ -402,6 +428,7 @@ class ItcSlider {
       }
     }
     _refresh() {
+      // create some constants
       const $itemList = this._$itemList;
       const widthItem = $itemList[0].getBoundingClientRect().width;
       const widthWrapper = this._$wrapper.getBoundingClientRect().width;
@@ -416,6 +443,7 @@ class ItcSlider {
       this._$items.classList.add(ItcSlider.SLIDER_TRANSITION_OFF);
       this._$items.style.transform = 'translateX(0)';
   
+      // setting properties after reset
       this._widthItem = widthItem;
       this._widthWrapper = widthWrapper;
       this._itemsInVisibleArea = itemsInVisibleArea;
@@ -425,6 +453,7 @@ class ItcSlider {
       this._balancingItemsFlag = false;
       this._activeItems = [];
   
+      // setting order and translate items after reset
       for (let i = 0, length = $itemList.length; i < length; i++) {
         const $item = $itemList[i];
         const position = i;
@@ -443,6 +472,7 @@ class ItcSlider {
         this._$items.classList.remove(ItcSlider.SLIDER_TRANSITION_OFF);
       });
   
+      // hide prev arrow for non-infinite slider
       if (!this._config.loop) {
         if (this._$controlPrev) {
           this._$controlPrev.classList.add(ItcSlider.CLASS_CONTROL_HIDE);
@@ -450,12 +480,16 @@ class ItcSlider {
         return;
       }
   
+      // translate last item before first
       const count = $itemList.length - 1;
+      // const translate = -$itemList.length * 100;
       const translate = -$itemList.length * this._widthStep;
       $itemList[count].dataset.order = -1;
       $itemList[count].dataset.translate = translate;
       $itemList[count].style.transform = `translateX(${translate}px)`;
+      // update values of extreme properties
       this._refreshExtremeValues();
+      // calling _autoplay
       this._autoplay();
     }
     next() {

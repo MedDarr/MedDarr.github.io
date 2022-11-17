@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="utf-8">
+   <title>Обратная связь</title>
+   <script src="https://code.jquery.com/jquery-2.0.2.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slapform@latest/slapform.min.css">
+    <script src="script8.js" defer ></script>
+    <link rel="stylesheet" href="style8.css">
+    <meta name="viewport" content="width=device-width, inital-scale=1, maximum-scale=1">
+</head>
+<body>
+    <div class="button">
+        <button onClick="javascript:PopUpShow()">Обратная связь</button>      
+    </div>
+
+
+
+<div class="b-popup" id="popup1">
+    <div class="b-popup-content">
+        <form action="https://api.slapform.com/lDRiX1jTf" method="POST">
+            <div class="container">
+              <div class="row">
+                <div class="col" style="float: none;">
+                  <div class="form-group">
+                    <h1 class="mt-5" style="float: none; text-align: center;">Обратная связь</h1>
+                  </div>
+                  <div class="form-group">
+                    <label>Имя</label>
+                    <input name="name" type="text" class="form-control required" placeholder="Имя" value="" required="required">
+                  </div>
+                  <div class="form-group">
+                    <div class="form-group">
+                      <label>E-mail</label>
+                      <input type="text" class="form-control required" name="email" placeholder="E-mail" required="required">
+                    </div>
+                    <label>Сообщение</label>
+                    <textarea name="message" type="textarea" class="form-control required" placeholder="Текст сообщения" required="required"></textarea>
+                    <div class="form-group">
+                      <label class="checkbox" for="sogl">
+                        <input type="checkbox"> Согласие с политикой обработки персональных данных</label>
+                    </div>
+                  </div>
+                  <div class="btn-group" role="group" style="float: right; text-align: center;">
+                    <button type="button" class="btn btn-primary" onClick="javascript:PopUpHide()">Отмена</button>
+                    <button type="submit" class="btn btn-success">Отправить</button>
+                  </div>
+                
+                </div>
+              </div>
+            </div>
+          </form>
+    </div>
+</div>
+</body>
+</html>

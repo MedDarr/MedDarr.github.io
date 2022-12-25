@@ -302,4 +302,77 @@ header {
 .line-block {
   margin-bottom: 30px;
 }
+.competency{
+  width: 90%;
+  margin: 0 auto;
+}
+.competency-h1{
+  font-size:16px;
+  max-width:80%;
+}
+.competency-info{
+  font-size:12px;
+  color: #050C33;
+}
+.competency-body{
+  display:flex;
+  flex-direction: row;
+  margin-left:0;
+  margin-right: 0;
+}
+.competency-block{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.competency-li{
+  max-width:45%;
+  min-width:40%;
+  margin-top:20px;
+  justify-content: center;
+}
+.competency-img{
+  position:relative;
+  top:0;
+  width:50px;
+  left: -14%;
+}
+.competency-text{
+  color:#9e9ea0;
+  font-size: 12px;
+}
+@media screen and (min-width:768px){
+  .competency-h1{
+    font-size:42px;
+    max-width:50%
+  }
+  .competency-body{
+    display: flex;
+    flex-direction: column;
+    margin-right: 370px;
+    gap:calc(20%/3);/*отступ между столбцами и строками */
+  }
+  .competency-info{
+    font-size:16px;
+    max-width:40%
+  }
+  .competency-block{
+    flex-direction: row;
+  }
+  .competency-li{
+    max-width:20%;
+    padding-right: 2%;
+    font-size: 16px;
+    font-weight: 500;
+  }
+   .competency-text{
+      font-size:14px;
+  }
+  .competency-img{
+    left: -14%;
+    display:flex;
+    height: 82px;
+    width: auto;
+  }
+}
 

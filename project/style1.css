@@ -470,7 +470,7 @@ header {
 }
 .img1{
   position:relative;
-  left:-5%;
+  left:-30%;
   bottom:-35px;
   display:flex;
   align-items:flex-end;
@@ -545,7 +545,7 @@ header {
   }
   .img1{
     left:-25%;
-    bottom:-20%;
+    bottom:-35%;
   }
   .img2{
     max-width:40%;

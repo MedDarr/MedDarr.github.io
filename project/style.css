@@ -251,7 +251,7 @@
     max-width: 100%;
   }
   
-  .full-screen-case .case-date {
+  .full-screen-case .c-date {
     margin-left: 0;
     margin-right: 0;
   }
@@ -260,7 +260,7 @@
     color: #fff;
   }
   
-  .full-screen-case .case-image {
+  .full-screen-case .c-img {
     position: absolute;
     top: 10px;
     bottom: 10px;

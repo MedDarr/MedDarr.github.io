@@ -748,20 +748,17 @@ tariffs {
 }
 .task-h1{
   font-size:16px;
-  max-width:70%;
-  margin:40px auto 20px;
+  max-width:60%;
   text-align:center;
 }
 @media (min-width: 768px){
 .task-h1{
-  font-size:42px;
+  font-size:36px;
   max-width:30%;
-  margin:182px auto 50px
 }
-  .task-img {
+.task-img {
   display:flex;
   height: 82px;
   width: auto;
 }
 }
-

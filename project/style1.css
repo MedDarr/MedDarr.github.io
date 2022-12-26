@@ -555,7 +555,7 @@ header {
 }
 tariffs {
   padding-bottom: 50px;
-  background: url("C:/Users/darya/Documents/index/project/project/img/icon-bg.svg") no-repeat right top, #fff;
+  background: url("./img/icon-bg.svg") no-repeat right top, #fff;
   background-size: cover;
 }
 
@@ -659,7 +659,7 @@ tariffs {
 
 .tariffs ul {
   padding-left: 15px;
-  list-style-image: url("C:/Users/darya/Documents/index/project/project/img/Vector.svg");
+  list-style-image: url("./img/Vector.svg");
 }
 
 .contact-button {

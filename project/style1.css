@@ -709,8 +709,8 @@ tariffs {
 }
 
 .task {
-  padding-top: 100px;
-  font-family: Montserrat;
+  width:100%;
+  position:relative;
 }
 .task-description {
   margin-bottom: 55px;
@@ -720,17 +720,18 @@ tariffs {
 }
 
 .task-block {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   margin-bottom: 60px;
 }
 .task-body {
-  font-weight: 500;
   font-size: 16px;
   color: #4f5a73;
 }
 
 .task-time {
-  font-size: 32px;
-  margin-top: -20px;
+  font-size: 16px;
   color: #050c33;
   font-weight: bold;
 }
@@ -746,15 +747,23 @@ tariffs {
     top:0;
 
 }
+.task-wrapper{
+  max-width:45%;
+  min-width:40%;
+  margin-top:20px;
+  justify-content: center;
+}
 .task-h1{
   font-size:16px;
-  max-width:60%;
+  max-width:70%;
   text-align:center;
 }
 @media (min-width: 768px){
 .task-h1{
   font-size:36px;
-  max-width:30%;
+  max-width:80%;
+  text-align:center;
+  
 }
 .task-img {
   display:flex;
